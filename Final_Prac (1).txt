@@ -1,0 +1,1636 @@
+
+Folder cmd
+npm create vite@latest my-app
+npm init @angular my-app
+
+
+
+PROGRAM 1 
+Personal Portfolio Website using HTML and CSS
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anu's Portfolio</title>
+    <style>
+        /* ===== Global Styles ===== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+
+        /* ===== Navigation Bar ===== */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1e3c72;
+            padding: 15px 40px;
+            color: white;
+        }
+
+        nav h2 {
+            margin: 0;
+            color: #ffcc00;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* ===== Home Section ===== */
+        .home {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to right, #4a90e2, #1e3c72);
+            color: white;
+        }
+
+        .home h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+
+        .home p {
+            font-size: 20px;
+            margin: 5px 0;
+        }
+
+        .home button {
+            padding: 12px 25px;
+            background: #ffcc00;
+            border: none;
+            color: black;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .home button:hover {
+            background: #ffe066;
+        }
+
+        /* ===== Sections ===== */
+        section {
+            padding: 60px 20px;
+        }
+
+        section h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* ===== Professional Info ===== */
+        #professional ul {
+            list-style: disc;
+            max-width: 700px;
+            margin: 0 auto;
+            padding-left: 20px;
+            text-align: left;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        /* ===== Cards ===== */
+        .card {
+            background: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            max-width: 400px;
+        }
+
+        /* ===== Projects Section ===== */
+        .project-card {
+            background: #e6f0ff;
+            border-left: 5px solid #4a90e2;
+        }
+
+        /* ===== Achievements Section ===== */
+        .achievement-card {
+            background: #e6f7ff;
+            border-left: 5px solid #1e90ff;
+        }
+
+        /* ===== Experience Section ===== */
+        .experience-card {
+            background: #fff3e6;
+            border-left: 5px solid #ff9900;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <h2>Anu's Portfolio</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#professional">Professional Info</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#experience">Experience</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <h1>Hello, I'm Anu</h1>
+        <p>Computer Science Student | Front-End Developer</p>
+        <p>Passionate about creating interactive and colorful websites.</p>
+        <p>Enjoys learning, coding, and sharing knowledge.</p>
+        <button onclick="contact()">Contact Me</button>
+    </section>
+
+    <!-- Professional Info Section -->
+    <section id="professional">
+        <h2>Professional Info</h2>
+        <ul>
+            <li>Proficient in HTML, CSS, and JavaScript.</li>
+            <li>Experience building responsive web pages and layouts.</li>
+            <li>Skilled in problem-solving and basic algorithm design.</li>
+            <li>Familiar with version control using Git.</li>
+            <li>Good communication and technical writing skills.</li>
+            <li>Passionate about continuous learning in technology.</li>
+            <li>Practice writing articles and tutorials on coding topics.</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="card project-card">
+            <h3>Personal Portfolio Website</h3>
+            <p>Designed and built my portfolio to showcase my skills and projects.</p>
+        </div>
+        <div class="card project-card">
+            <h3>Simple Calculator App</h3>
+            <p>A basic calculator for addition, subtraction, multiplication, and division.</p>
+        </div>
+        <div class="card project-card">
+            <h3>Quiz Game</h3>
+            <p>Interactive quiz game with multiple-choice questions and scoring system.</p>
+        </div>
+        <div class="card project-card">
+            <h3>Writing Practice Website</h3>
+            <p>Created a small site to practice typing and writing skills.</p>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <h2>Achievements</h2>
+        <div class="card achievement-card">
+            <h3>Web Development Certification</h3>
+            <p>Completed a front-end web development course with distinction.</p>
+        </div>
+        <div class="card achievement-card">
+            <h3>Hackathon Participation</h3>
+            <p>Participated in coding competitions and earned recognition certificates.</p>
+        </div>
+        <div class="card achievement-card">
+            <h3>Online Coding Challenges</h3>
+            <p>Completed multiple challenges on HackerRank and CodeChef.</p>
+        </div>
+        <div class="card achievement-card">
+            <h3>Blog Writing</h3>
+            <p>Published technical articles about web development and programming.</p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="card experience-card">
+            <h3>Web Developer Intern</h3>
+            <p>ABC Company – 2024</p>
+            <p>Worked on front-end web projects using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="card experience-card">
+            <h3>Freelance Web Designer</h3>
+            <p>2023 – Present</p>
+            <p>Designed small websites and landing pages for clients.</p>
+        </div>
+        <div class="card experience-card">
+            <h3>Technical Writing Intern</h3>
+            <p>XYZ Blog – 2023</p>
+            <p>Created tutorials and articles on web development topics.</p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        function contact() {
+            alert("Contact feature coming soon!");
+        }
+    </script>
+
+</body>
+</html>
+
+
+PROGRAM 2  
+Smart Shopping Cart Application using React.js Components
+
+//npm create vite@latest my-app
+//npm run dev
+
+APP.JSX
+
+import React, { useState } from "react";
+
+function App() {
+  const products = [
+    { id: 1, name: "Laptop", price: 50000 },
+    { id: 2, name: "Phone", price: 20000 }
+  ];
+
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+  };
+
+  const removeFromCart = (id) => {
+    setCart(cart.filter(item => item.id !== id));
+  };
+
+  const total = cart.reduce((sum, item) => sum + item.price, 0);
+
+  return (
+    <div>
+      <h1>Smart Shopping Cart</h1>
+
+      <h2>Products</h2>
+      {products.map(product => (
+        <div key={product.id}>
+          {product.name} - ₹{product.price}
+          <button onClick={() => addToCart(product)}>Add</button>
+        </div>
+      ))}
+
+      <h2>Cart</h2>
+      {cart.map(item => (
+        <div key={item.id}>
+          {item.name}
+          <button onClick={() => removeFromCart(item.id)}>Remove</button>
+        </div>
+      ))}
+
+      <h3>Total: ₹{total}</h3>
+    </div>
+  );
+}
+
+export default App;
+
+PRPGRAM 3
+  Form by Implementing Event Handling and Form Validation in React.js
+
+//npm create vite@latest intern-app
+//npm run dev
+import React, { useState } from "react";
+
+function App() {
+
+  const [form, setForm] = useState({ name: "", email: "" });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const submit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
+  return (
+    <div>
+      <h1>Internship Form</h1>
+
+      <form onSubmit={submit}>
+        <input name="name" placeholder="Name" onChange={handleChange} required />
+        <br /><br />
+        <input name="email" placeholder="Email" onChange={handleChange} required />
+        <br /><br />
+        <button type="submit">Submit</button>
+      </form>
+
+      {submitted && <h3>Submitted Successfully!</h3>}
+    </div>
+  );
+}
+
+export default App;
+
+PROGRAM 4 
+  Student Dashboard Using React Router with Multi-page Applications
+
+//npm create vite@latest student-app
+//npm run dev
+import React, { useState } from "react";
+
+function App() {
+
+  const [page, setPage] = useState("dashboard");
+
+  return (
+    <div style={{textAlign:"center", fontFamily:"Arial"}}>
+
+      <h1>Student Management System</h1>
+
+      <div style={{marginBottom:"20px"}}>
+        <button onClick={() => setPage("dashboard")}>Dashboard</button>
+        <button onClick={() => setPage("students")}>Students</button>
+        <button onClick={() => setPage("profile")}>Profile</button>
+      </div>
+
+      <div style={{
+        border:"2px solid black",
+        padding:"20px",
+        width:"300px",
+        margin:"auto"
+      }}>
+
+        {page === "dashboard" && <h2>Welcome to Dashboard</h2>}
+        {page === "students" && <h2>Student List Page</h2>}
+        {page === "profile" && <h2>User Profile Page</h2>}
+
+      </div>
+
+    </div>
+  );
+}
+
+export default App;
+
+
+PROGRAM  5 
+Smart Task Tracker Application Using React and Redux
+
+//npm create vite@latest task-app
+//npm install @reduxjs/toolkit react-redux
+//npm run dev
+APP.JSX
+import React, { useState } from "react";
+
+// Import Redux hooks
+import { useSelector, useDispatch } from "react-redux";
+
+// Import actions
+import { addTask, deleteTask, toggleTask } from "./taskslice";
+
+function App() {
+
+  const [task, setTask] = useState("");
+
+  // Get tasks from Redux store
+  const tasks = useSelector((state) => state.tasks.list);
+
+  const dispatch = useDispatch();
+
+  const handleAdd = () => {
+    if(task.trim() !== ""){
+      dispatch(addTask(task));
+      setTask("");
+    }
+  };
+
+  return (
+    <div style={{ textAlign: "center" }}>
+      <h2>Smart Task Tracker</h2>
+
+      <input
+        type="text"
+        placeholder="Enter task"
+        value={task}
+        onChange={(e) => setTask(e.target.value)}
+      />
+
+      <button onClick={handleAdd}>
+        Add
+      </button>
+
+      <ul>
+        {tasks.map((t, index) => (
+          <li
+            key={index}
+            style={{
+              textDecoration: t.completed ? "line-through" : "none"
+            }}
+          >
+
+            <span onClick={() => dispatch(toggleTask(index))}>
+              {t.text}
+            </span>
+
+            <button onClick={() => dispatch(deleteTask(index))}>
+              Delete
+            </button>
+
+          </li>
+        ))}
+      </ul>
+
+    </div>
+  );
+}
+
+export default App;
+
+STORE.JS
+// Step 2: Initialize Redux store
+
+import { configureStore } from "@reduxjs/toolkit";
+import taskReducer from "./taskslice";
+
+// Step 6: Create Redux store and connect reducer
+export const store = configureStore({
+  reducer: {
+    tasks: taskReducer
+  }
+});
+
+
+Taskslice.js
+// Import createSlice from Redux Toolkit
+import { createSlice } from "@reduxjs/toolkit";
+
+// Initial state for tasks
+const initialState = {
+  list: []
+};
+
+// Step 3,4,5: Define actions and reducer logic
+const taskSlice = createSlice({
+  name: "tasks",
+  initialState,
+  reducers: {
+
+    // ADD_TASK
+    addTask: (state, action) => {
+      state.list.push({
+        text: action.payload,
+        completed: false
+      });
+    },
+
+    // DELETE_TASK
+    deleteTask: (state, action) => {
+      state.list.splice(action.payload, 1);
+    },
+
+    // TOGGLE_TASK
+    toggleTask: (state, action) => {
+      state.list[action.payload].completed =
+        !state.list[action.payload].completed;
+    }
+
+  }
+});
+
+// Export actions
+export const { addTask, deleteTask, toggleTask } = taskSlice.actions;
+
+// Export reducer
+export default taskSlice.reducer;
+
+MAIN.JSX
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+// Step 7: Import Provider
+import { Provider } from "react-redux";
+
+// Import store
+import { store } from "./store";
+
+// Wrap App with Redux Provider
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+
+PROGRAM  6 
+
+ Online Job Application Form Using Angular  
+
+//npm install -g @angular/cli
+//ng new job-form
+//cd job-form
+//ng serve
+APP.TS
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [FormsModule, CommonModule],
+  templateUrl: './app.html'
+})
+export class App {
+
+  submitted = false;
+
+  formData = {
+    name: '',
+    email: '',
+    phone: '',
+    address: '',
+    position: '',
+    location: '',
+    education: '',
+    experience: ''
+  };
+
+  skillsList = ['Java', 'Python', 'Angular', 'React'];
+
+  submitForm() {
+    this.submitted = true;
+  }
+
+}
+
+
+APP.HTML
+<h2>Online Job Application Form</h2>
+
+<form #jobForm="ngForm" (ngSubmit)="submitForm()">
+
+Name:
+<input type="text" name="name" required [(ngModel)]="formData.name">
+<br><br>
+
+Email:
+<input type="email" name="email" required [(ngModel)]="formData.email">
+<br><br>
+
+Phone:
+<input type="text" name="phone" pattern="[0-9]{10}" required [(ngModel)]="formData.phone">
+<br><br>
+
+Address:
+<textarea name="address" [(ngModel)]="formData.address"></textarea>
+<br><br>
+
+Position:
+<select name="position" [(ngModel)]="formData.position">
+<option value="">Select Position</option>
+<option>Developer</option>
+<option>Tester</option>
+<option>Manager</option>
+</select>
+<br><br>
+
+Preferred Location:
+<select name="location" [(ngModel)]="formData.location">
+<option>Chennai</option>
+<option>Bangalore</option>
+<option>Hyderabad</option>
+</select>
+<br><br>
+
+Education:
+<select name="education" [(ngModel)]="formData.education">
+<option>BSc</option>
+<option>BCA</option>
+<option>BE</option>
+<option>MCA</option>
+</select>
+<br><br>
+
+Skills:<br>
+<div *ngFor="let skill of skillsList">
+<input type="checkbox"> {{skill}}
+</div>
+<br>
+
+Experience:<br>
+<input type="radio" name="exp" value="Fresher" [(ngModel)]="formData.experience"> Fresher
+<input type="radio" name="exp" value="Experienced" [(ngModel)]="formData.experience"> Experienced
+<br><br>
+
+Resume:
+<input type="file">
+<br><br>
+
+<input type="checkbox" required> I declare that the above details are correct
+<br><br>
+
+<button type="submit" [disabled]="!jobForm.valid">Submit</button>
+
+</form>
+
+<div *ngIf="submitted">
+<h3>Application Submitted Successfully!</h3>
+</div>
+
+MAIN.TS
+import { bootstrapApplication } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { importProvidersFrom } from '@angular/core';
+import { App } from './app/app';
+
+bootstrapApplication(App, {
+  providers: [importProvidersFrom(FormsModule)]
+});
+
+
+
+PROGRAM  7   Hospital Management System for Patients using AngularJS Services and REST API
+
+//npm install -g @angular/cli
+//ng new job-form
+//cd job-form
+//ng serve
+
+APP.TS
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [FormsModule, CommonModule],
+  templateUrl: './app.html'
+})
+export class AppComponent {
+
+  name = '';
+  age = '';
+  gender = '';
+  patients: any[] = [];
+
+  addPatient() {
+    this.patients.push({
+      name: this.name,
+      age: this.age,
+      gender: this.gender
+    });
+
+    this.name = '';
+    this.age = '';
+    this.gender = '';
+  }
+}
+
+APP.HTML
+<h1>Hospital Management System</h1>
+
+<input [(ngModel)]="name" placeholder="Name">
+<input [(ngModel)]="age" placeholder="Age">
+<input [(ngModel)]="gender" placeholder="Gender">
+
+<button (click)="addPatient()">Add</button>
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Gender</th>
+  </tr>
+
+  <tr *ngFor="let p of patients">
+    <td>{{p.name}}</td>
+    <td>{{p.age}}</td>
+    <td>{{p.gender}}</td>
+  </tr>
+</table>
+
+MAIN.TS
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app/app';
+
+bootstrapApplication(AppComponent)
+  .catch(err => console.error(err));
+
+MAIN.SERVER.TS(INCASE IF U HAVE)
+
+import { BootstrapContext, bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app/app';
+import { config } from './app/app.config.server';
+
+const bootstrap = (context: BootstrapContext) =>
+  bootstrapApplication(AppComponent, config, context);
+
+export default bootstrap;
+
+PROGRAM 8
+Simple Attendance Tracking System using Node.js: Installation and HTTP Server Setup
+
+SERVER.JS
+//mkdir node-server
+//cd node-server
+//node server.js
+
+const http = require('http');
+const url = require('url');
+const qs = require('querystring');
+
+let attendance = []; // stores submitted attendance
+
+const students = ["Anu", "Vikram", "Sara", "Rahul"]; // example student names
+
+const server = http.createServer((req, res) => {
+  const reqUrl = url.parse(req.url);
+  
+  if (req.method === 'POST') {
+    let body = '';
+    req.on('data', chunk => body += chunk);
+    req.on('end', () => {
+      const data = qs.parse(body);
+      attendance = Object.keys(data); // keys are student names checked
+      res.writeHead(200, {'Content-Type': 'text/html'});
+      res.write(`<h2>Attendance Submitted!</h2>`);
+      res.write(`<p>Present Students: ${attendance.join(", ")}</p>`);
+      res.write(`<a href="/">Back</a>`);
+      res.end();
+    });
+  } else {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write(`<h1>Attendance Tracker</h1>`);
+    res.write(`<form method="POST">`);
+    students.forEach(student => {
+      res.write(`<input type="checkbox" name="${student}"/> ${student}<br/>`);
+    });
+    res.write(`<br><button type="submit">Submit Attendance</button>`);
+    res.write(`</form>`);
+    res.end();
+  }
+});
+
+server.listen(3000, () => console.log("Server running at http://localhost:3000"));
+
+
+PROGRAM 9 
+Hospital Appointment RESTful API using Express.js: routing, middleware and Error Handling
+
+(with curl)
+
+mkdir hospital-api
+cd hospital-api
+npm init -y
+npm install express
+mkdir middleware
+mkdir routes
+
+hospital-api/index.js
+
+const express = require('express');
+const logger = require('./middleware/logger');
+const appointmentRoutes = require('./routes/appointmentRoutes');
+
+const app = express();
+const PORT = 3000;
+
+// Middleware
+app.use(express.json());
+app.use(logger);
+
+// Routes
+app.use('/api', appointmentRoutes);
+
+// Start server
+app.listen(PORT, () => {
+  console.log("Server running on http://localhost:3000");
+});
+
+
+
+routes/appointmentRoutes.js
+
+
+const express = require('express');
+const router = express.Router();
+
+let doctors = [
+  { id: 1, name: 'Dr. Arun', specialization: 'Cardiologist' },
+  { id: 2, name: 'Dr. Meena', specialization: 'Dermatologist' }
+];
+
+let appointments = [
+  { id: 1, patientName: 'Alice', doctorId: 1 },
+  { id: 2, patientName: 'Bob', doctorId: 2 }
+];
+
+// Get doctors
+router.get('/doctors', (req, res) => {
+  res.json(doctors);
+});
+
+// Get appointments
+router.get('/appointments', (req, res) => {
+  res.json(appointments);
+});
+
+// Create appointment
+router.post('/appointments', (req, res) => {
+  const { patientName, doctorId } = req.body;
+  if (!patientName || !doctorId) {
+    return res.status(400).json({ error: 'Patient name and doctor ID are required' });
+  }
+
+  const newAppointment = {
+    id: appointments.length + 1,
+    patientName,
+    doctorId
+  };
+
+  appointments.push(newAppointment);
+
+  res.status(201).json({
+    message: 'Appointment booked',
+    appointment: newAppointment
+  });
+});
+
+// Delete appointment
+router.delete('/appointments/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+  appointments = appointments.filter(app => app.id !== id);
+
+  res.json({ message: 'Appointment cancelled' });
+});
+
+module.exports = router;
+
+//run:
+//node index.js
+//powershell
+Invoke-RestMethod -Uri "http://localhost:3000/api/appointments" -Method POST -ContentType "application/json" -Body '{"patientName":"Eve","doctorId":1}'
+
+Open your browser:
+
+Doctors: http://localhost:3000/api/doctors
+
+Appointments: http://localhost:3000/api/appointments
+
+PROGRAM 9 WITH POSTMAN
+
+(with postman)
+server.js
+//mkdir appointment-api
+//cd appointment-api
+//npm init -y
+//npm install express
+//node server.js
+
+const express = require('express');
+const app = express();
+
+app.use(express.json());
+
+let appointments = [];
+
+app.post('/add', (req, res) => {
+  appointments.push(req.body);
+  res.send("Appointment Booked Successfully");
+});
+
+app.get('/all', (req, res) => {
+  res.json(appointments);
+});
+
+app.listen(3000, () => {
+  console.log("Server running on port 3000");
+});
+
+
+IN POSTMAN:
+POST METHOD body--->raw--->json
+
+{
+  "name": "Anu",
+  "doctor": "Dr.Raj",
+  "date": "2026-03-09"
+}
+http://localhost:3000/add  
+
+ PROGRAM 12
+Placement Registration Website Using React.js Frontend with Node.js Backend APIs
+
+
+PLACEMENT BACKEND
+//mkdir placement-backend
+//cd placement-backend
+//npm init -y
+//npm install express cors
+//type nul > server.js
+SERVER.JS
+const express = require("express");
+const cors = require("cors");
+const fs = require("fs");
+const path = require("path");
+
+const app = express();
+const PORT = 5000;
+
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+// File to store students
+const dataFile = path.join(__dirname, "students.json");
+
+// POST /register
+app.post("/register", (req, res) => {
+  const student = req.body;
+
+  // Read existing data
+  let students = [];
+  if (fs.existsSync(dataFile)) {
+    const data = fs.readFileSync(dataFile);
+    students = JSON.parse(data);
+  }
+
+  // Add new student
+  students.push(student);
+
+  // Save back to file
+  fs.writeFileSync(dataFile, JSON.stringify(students, null, 2));
+
+  res.json({ message: "Student registered successfully!" });
+});
+
+// Optional: GET all students
+app.get("/students", (req, res) => {
+  if (fs.existsSync(dataFile)) {
+    const data = fs.readFileSync(dataFile);
+    res.json(JSON.parse(data));
+  } else {
+    res.json([]);
+  }
+});
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Backend running at http://localhost:${PORT}`);
+});
+
+//node server.js
+
+PLACEMENT FRONTEND:
+//cd ..
+//npm create vite@latest placement-frontend
+//cd placement-frontend
+//npm install
+//npm install axios
+
+APP.JSX
+import React, { useState } from "react";
+import axios from "axios";
+
+function App() {
+  const [student, setStudent] = useState({
+    name: "",
+    email: "",
+    department: "",
+  });
+  const [message, setMessage] = useState("");
+
+  const handleChange = (e) => {
+    setStudent({ ...student, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("http://localhost:5000/register", student);
+      setMessage(res.data.message);
+      setStudent({ name: "", email: "", department: "" });
+    } catch (err) {
+      setMessage(err.response?.data?.message || "Error registering student");
+    }
+  };
+
+  return (
+    <div style={{ textAlign: "center" }}>
+      <h2>Placement Registration</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          value={student.name}
+          onChange={handleChange}
+          required
+        />
+        <br />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={student.email}
+          onChange={handleChange}
+          required
+        />
+        <br />
+        <input
+          type="text"
+          name="department"
+          placeholder="Department"
+          value={student.department}
+          onChange={handleChange}
+          required
+        />
+        <br />
+        <button type="submit">Register</button>
+      </form>
+      <h3>{message}</h3>
+    </div>
+  );
+}
+
+export default App;
+//npm run dev
+
+//cd placement-backend
+//node server.js
+
+PROGRAM 13  
+Deployment of a Full-Stack Student Admission Application on a Cloud Platform
+
+First create 2 folders 
+backend
+frontend
+ for frontend:
+//npx create-vite@latest frontend
+//cd frontend
+//npm install
+//npm install axios
+//npm run dev
+App.jsx
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+function App() {
+
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [students, setStudents] = useState([]);
+
+  const addStudent = async () => {
+    await axios.post("http://localhost:5000/add-user", {
+      name,
+      phone
+    });
+
+    fetchStudents();
+    setName("");
+    setPhone("");
+  };
+
+  const fetchStudents = async () => {
+    const res = await axios.get("http://localhost:5000/users");
+    setStudents(res.data);
+  };
+
+  const deleteStudent = async (id) => {
+    await axios.delete('http://localhost:5000/delete-user/${id}');
+    fetchStudents();
+  };
+
+  useEffect(() => {
+    fetchStudents();
+  }, []);
+
+  return (
+    <div style={{textAlign:"center", marginTop:"50px"}}>
+
+      <h1>Student Admission</h1>
+
+      <input
+        placeholder="Student Name"
+        value={name}
+        onChange={(e)=>setName(e.target.value)}
+      />
+
+      <br/><br/>
+
+      <input
+        placeholder="Phone Number"
+        value={phone}
+        onChange={(e)=>setPhone(e.target.value)}
+      />
+
+      <br/><br/>
+
+      <button onClick={addStudent}>Add Student</button>
+
+      <h2>Student List</h2>
+
+      {students.map((s)=>(
+        <div key={s.id}>
+          {s.name} - {s.phone}
+          <button onClick={()=>deleteStudent(s.id)}>Delete</button>
+        </div>
+      ))}
+
+    </div>
+  );
+}
+
+export default App;
+
+for backend open new terminal
+
+//mkdir Backend
+//cd backend
+//npm init -y
+//npm install express cors sqlite3
+//node server.js
+
+SERVER.JS
+const express = require("express");
+const cors = require("cors");
+const sqlite3 = require("sqlite3").verbose();
+
+const app = express();
+const PORT = 5000;
+
+app.use(cors());
+app.use(express.json());
+
+const db = new sqlite3.Database("./students.db");
+
+db.run(`
+CREATE TABLE IF NOT EXISTS students (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT,
+  phone TEXT
+)
+`);
+
+app.post("/add-user", (req,res)=>{
+  const {name, phone} = req.body;
+
+  db.run(
+    "INSERT INTO students(name,phone) VALUES (?,?)",
+    [name, phone],
+    function(err){
+      if(err) return res.status(500).json(err);
+
+      res.json({message:"Student added"});
+    }
+  );
+});
+
+app.get("/users",(req,res)=>{
+  db.all("SELECT * FROM students",(err,rows)=>{
+    if(err) return res.status(500).json(err);
+    res.json(rows);
+  });
+});
+
+app.delete("/delete-user/:id",(req,res)=>{
+  const id = req.params.id;
+
+  db.run("DELETE FROM students WHERE id=?",[id],function(err){
+    if(err) return res.status(500).json(err);
+    res.json({message:"Student deleted"});
+  });
+});
+
+app.listen(PORT,()=>{
+  console.log('Server running at http://localhost:${PORT}');
+});
+
+Hosting steps:
+Open GitHub create a repository add the files in backend folder except node_modules alone and
+ open render dashboard
+ click new web service and give the repository link after that in
+ build command give npm install 
+in start command give node server.js 
+then our link will be live
+
+PROGRAM 11  online exam portalAuthentication and Session Management Using JWT in Node.js Applications
+
+
+Program 11: Online Examination Portal – JWT Authentication (Node.js + HTML/JS)
+
+1. Create the project folder
+
+mkdir online-exam-portal
+cd online-exam-portal
+
+
+2. Initialize npm and install dependencies
+
+npm init -y
+npm install express jsonwebtoken bcryptjs cors
+
+3. Create `server.js`
+
+const express = require('express');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+const cors = require('cors');
+const path = require('path');
+
+const app = express();
+const PORT = 5000;
+const SECRET_KEY = 'exam_secret_key'; // In production, use an environment variable
+
+// Middleware
+app.use(express.json());
+app.use(cors());
+app.use(express.static(__dirname)); // Serves index.html from the root
+
+// In‑memory user storage (replace with a database in production)
+let users = [];
+
+// Test route
+app.get('/', (req, res) => {
+  res.send('Online Exam Portal API is running');
+});
+
+// ==================== AUTH ENDPOINTS ====================
+
+// Register a new user
+app.post('/register', async (req, res) => {
+  const { username, password } = req.body;
+  if (!username || !password) {
+    return res.status(400).json({ message: 'All fields required' });
+  }
+
+  const userExists = users.find(u => u.username === username);
+  if (userExists) {
+    return res.status(400).json({ message: 'User already exists' });
+  }
+
+  const hashedPassword = await bcrypt.hash(password, 10);
+  users.push({ username, password: hashedPassword });
+  res.json({ message: 'User registered successfully' });
+});
+
+// Login – returns a JWT token
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+  const user = users.find(u => u.username === username);
+  if (!user) {
+    return res.status(400).json({ message: 'Invalid username' });
+  }
+
+  const validPassword = await bcrypt.compare(password, user.password);
+  if (!validPassword) {
+    return res.status(400).json({ message: 'Invalid password' });
+  }
+
+  const token = jwt.sign(
+    { username: user.username },
+    SECRET_KEY,
+    { expiresIn: '1h' }
+  );
+
+  res.json({ message: 'Login successful', token });
+});
+
+// ==================== PROTECTED ROUTE ====================
+
+// Middleware to verify JWT token
+function verifyToken(req, res, next) {
+  const authHeader = req.headers['authorization'];
+  const token = authHeader && authHeader.split(' ')[1]; // Bearer TOKEN
+
+  if (!token) {
+    return res.status(401).json({ message: 'Access denied. No token provided.' });
+  }
+
+  jwt.verify(token, SECRET_KEY, (err, decoded) => {
+    if (err) {
+      return res.status(403).json({ message: 'Invalid or expired token' });
+    }
+    req.user = decoded;
+    next();
+  });
+}
+
+// Protected exam route – returns exam questions
+app.get('/exam', verifyToken, (req, res) => {
+  // Static exam questions (in production, fetch from DB)
+  const exam = [
+    {
+      id: 1,
+      question: 'What is 5 + 5?',
+      options: ['8', '9', '10', '11'],
+      answer: '10'
+    },
+    {
+      id: 2,
+      question: 'What does JWT stand for?',
+      options: [
+        'Java Web Token',
+        'JSON Web Token',
+        'JavaScript Web Token',
+        'Joint Web Token'
+      ],
+      answer: 'JSON Web Token'
+    }
+  ];
+  res.json({ message: `Welcome ${req.user.username}`, exam });
+});
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+});
+
+
+4. Create the frontend – `index.html`
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Exam Portal</title>
+  <style>
+    body {
+      margin: 0;
+      background: lightgray;
+      font-family: system-ui, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: white;
+      width: 450px;
+      padding: 2rem;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h2 {
+      color: black;
+      margin-bottom: 1.5rem;
+    }
+    h3 {
+      color: black;
+      margin: 1.5rem 0 0.5rem;
+    }
+    input {
+      width: 100%;
+      padding: 0.7rem;
+      margin: 0.5rem 0;
+      border: 1px solid gray;
+      border-radius: 40px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    button {
+      background: black;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 40px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin: 0.5rem 0.2rem;
+    }
+    button:hover {
+      background: dimgray;
+    }
+    hr {
+      margin: 1.5rem 0;
+      border: 1px solid lightgray;
+    }
+    #message {
+      color: red;
+      margin-top: 0.5rem;
+    }
+    #examSection {
+      display: none;
+      text-align: left;
+    }
+    .question {
+      margin: 1rem 0;
+      padding: 0.5rem;
+      border: 1px solid lightgray;
+      border-radius: 12px;
+    }
+    .options {
+      list-style: none;
+      padding: 0;
+    }
+    .options li {
+      margin: 0.3rem 0;
+    }
+    .options input {
+      width: auto;
+      margin-right: 0.5rem;
+    }
+    .logout-btn {
+      background: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>📝 Online Exam Portal</h2>
+
+    <!-- Registration Form -->
+    <h3>Register</h3>
+    <input type="text" id="regUsername" placeholder="Username">
+    <input type="password" id="regPassword" placeholder="Password">
+    <button onclick="register()">Register</button>
+
+    <hr>
+
+    <!-- Login Form -->
+    <h3>Login</h3>
+    <input type="text" id="loginUsername" placeholder="Username">
+    <input type="password" id="loginPassword" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="message"></p>
+
+    <hr>
+
+    <!-- Exam Section (initially hidden) -->
+    <div id="examSection">
+      <h3>Exam Questions</h3>
+      <div id="questions"></div>
+      <button onclick="submitExam()">Submit Exam</button>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script>
+    const API_URL = 'http://localhost:5000';
+    let correctAnswers = {};
+
+    // Register a new user
+    async function register() {
+      const username = document.getElementById('regUsername').value;
+      const password = document.getElementById('regPassword').value;
+
+      if (!username || !password) {
+        alert('Please fill all fields');
+        return;
+      }
+
+      try {
+        const res = await fetch(`${API_URL}/register`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password })
+        });
+        const data = await res.json();
+        alert(data.message);
+      } catch (err) {
+        alert('Registration failed: ' + err.message);
+      }
+    }
+
+    // Login and store token
+    async function login() {
+      const username = document.getElementById('loginUsername').value;
+      const password = document.getElementById('loginPassword').value;
+
+      if (!username || !password) {
+        alert('Please fill all fields');
+        return;
+      }
+
+      try {
+        const res = await fetch(`${API_URL}/login`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password })
+        });
+        const data = await res.json();
+
+        if (res.ok) {
+          localStorage.setItem('token', data.token);
+          document.getElementById('message').innerText = 'Login successful!';
+          loadExam();
+        } else {
+          document.getElementById('message').innerText = data.message;
+        }
+      } catch (err) {
+        document.getElementById('message').innerText = 'Login error: ' + err.message;
+      }
+    }
+
+    // Load exam questions (protected)
+    async function loadExam() {
+      const token = localStorage.getItem('token');
+      if (!token) return;
+
+      try {
+        const res = await fetch(`${API_URL}/exam`, {
+          headers: { 'Authorization': 'Bearer ' + token }
+        });
+        const data = await res.json();
+
+        if (res.ok) {
+          // Hide login/register forms, show exam section
+          document.querySelectorAll('h3, input, button:not(#examSection button)').forEach(el => {
+            if (el.closest('#examSection')) return;
+            el.style.display = 'none';
+          });
+          document.querySelector('hr').style.display = 'none';
+          document.getElementById('examSection').style.display = 'block';
+
+          // Render questions
+          const questionsDiv = document.getElementById('questions');
+          questionsDiv.innerHTML = '';
+          data.exam.forEach(q => {
+            correctAnswers[q.id] = q.answer;
+            const qDiv = document.createElement('div');
+            qDiv.className = 'question';
+            qDiv.innerHTML = `
+              <p><strong>${q.question}</strong></p>
+              <ul class="options">
+                ${q.options.map(opt => `
+                  <li>
+                    <label>
+                      <input type="radio" name="q${q.id}" value="${opt}">
+                      ${opt}
+                    </label>
+                  </li>
+                `).join('')}
+              </ul>
+            `;
+            questionsDiv.appendChild(qDiv);
+          });
+        } else {
+          alert('Failed to load exam: ' + data.message);
+          logout();
+        }
+      } catch (err) {
+        alert('Error loading exam: ' + err.message);
+      }
+    }
+
+    // Submit exam and calculate score
+    function submitExam() {
+      let score = 0;
+      let total = Object.keys(correctAnswers).length;
+
+      for (let qId in correctAnswers) {
+        const selected = document.querySelector(`input[name="q${qId}"]:checked`);
+        if (selected && selected.value === correctAnswers[qId]) {
+          score++;
+        }
+      }
+
+      alert(`Your Score: ${score} / ${total}`);
+    }
+
+    // Logout – remove token and reload page
+    function logout() {
+      localStorage.removeItem('token');
+      location.reload();
+    }
+
+    // Auto‑login if token exists (on page load)
+    window.onload = function() {
+      if (localStorage.getItem('token')) {
+        loadExam();
+      }
+    };
+  </script>
+</body>
+</html>
+
+5. Run the application
+
+node server.js
+
+
+
+
